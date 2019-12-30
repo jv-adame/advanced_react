@@ -39,7 +39,7 @@ class Items extends Component {
                     <Query 
                         query={ALL_ITEMS_QUERY} 
                         variables={{
-                            skip: this.props.page *perPage - perPage,
+                            skip: this.props.page * perPage - perPage,
                         }}>
                         {({data, error, loading}) => {
                             if(loading) return <p>Loading...</p>

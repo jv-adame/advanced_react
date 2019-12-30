@@ -15,6 +15,7 @@ type Mutation {
     deleteItem(
         id: ID!,
     ): Item
+    signup(email: String!, password: String!, name: String!): User!
 }
 type Query {
     items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]!
