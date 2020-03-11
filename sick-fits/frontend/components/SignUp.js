@@ -31,10 +31,11 @@ class SignUp extends Component {
                 {(signup, {error, loading})=> 
                 {
                     return(
-                        <Form method="post" onSubmit={async (e) => {
-                            event.preventDefault();
-                            await signup();
-                            this.setState({name: '', email: '', password: ''})
+                        <Form method="post" onSubmit={async e => {
+                            e.preventDefault();
+                            const res = await signup();
+                            console.log(res);
+                            this.setState({name: '', email: '', password: ''});
                         }}>
                             <fieldset disabled={loading} aria-busy={loading}>
                                 <h2>Sign up for An Account</h2>
