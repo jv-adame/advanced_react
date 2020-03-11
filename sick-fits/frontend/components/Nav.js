@@ -1,9 +1,17 @@
 import Link from "next/link";
 import NavStyles from "./styles/NavStyles";
+import User from './User';
 
 const Nav = () => (
     /* Not reading the imported NavStyles.js "background" template literal correctly.  Why is that? */
     <NavStyles>
+        <User>
+            {({data: { me }}) => {
+                console.log(me);
+            if(me) return <p>{me.name}</p>
+            return null;
+            }}
+        </User>
         <Link href="/sell">
             <a>Sell!</a>
         </Link>
