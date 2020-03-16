@@ -1,7 +1,7 @@
 import Link from "next/link";
 import NavStyles from "./styles/NavStyles";
 import User from './User';
-
+import SignOut from './SignOut'
 const Nav = () => (
     /* Not reading the imported NavStyles.js "background" template literal correctly.  Why is that? */
     
@@ -25,6 +25,7 @@ const Nav = () => (
                             <Link href="/me">
                                 <a>Account</a>
                             </Link>    
+                            <SignOut />
                         </>
                     )}
                     {!me && (
